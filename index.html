@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Customer Segmentation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            max-width: 500px;
+            width: 100%;
+        }
+        h1 {
+            text-align: center;
+            color:purple;
+        }
+        input, select, button {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Customer Segmentation</h1>
+        <form action="/cluster" method="POST">
+            <input type="number" name="age" placeholder="Enter Age" required />
+            <input type="number" name="income" placeholder="Enter Annual Income (e.g., 50000)" required />
+            <input type="number" name="spending_score" placeholder="Enter Spending Score (1-100)" required />
+            <select name="social_media" required>
+                <option value="" disabled selected>Preferred Social Media</option>
+                <option value="Instagram">Instagram</option>
+                <option value="TikTok">TikTok</option>
+                <option value="Snapchat">Snapchat</option>
+            </select>
+            <input type="number" name="streaming_hours" placeholder="Hours on Streaming (Weekly)" required />
+            <input type="number" name="gaming_hours" placeholder="Hours on Gaming (Weekly)" required />
+            <button type="submit">Find My Segment</button>
+        </form>
+    </div>
+</body>
+</html>
