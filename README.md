@@ -1,1 +1,2 @@
 # CodeClauseInternship_CustomerSegmentationTool
+CodeClause Internship Golden Level Project-1
